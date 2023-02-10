@@ -11,16 +11,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import ch.boc.logic.AccountEJBImpl;
 import ch.boc.logic.BankEJBImpl;
+import ch.boc.logic.ILocalAccount;
+import ch.boc.logic.ILocalBank;
 
 @WebServlet("/accueil")
 public class AccueilServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@EJB
-	private BankEJBImpl bank = new BankEJBImpl();
+	private ILocalBank bank = new BankEJBImpl();
 
 	@EJB
-	private AccountEJBImpl account;
+	private ILocalAccount account;
 
 	public AccueilServlet() {
 		super();

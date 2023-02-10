@@ -16,7 +16,7 @@ public class Client {
 		IRemoteBank stubBank = lookupBank();
 		IRemoteAccount stubAccount = lookupAccount();
 
-		BankEJBImpl bank = new BankEJBImpl();
+		IRemoteBank bank = new BankEJBImpl();
 
 		AccountEJBImpl acc1 = new AccountEJBImpl();
 		AccountEJBImpl acc2 = new AccountEJBImpl();
